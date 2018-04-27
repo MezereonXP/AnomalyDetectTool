@@ -9,7 +9,6 @@ import java.util.ArrayList;
  * @author mezereon E-mail:mezereon@gmail.com
  * @since 18-4-12
  */
-
 public class LOF {
 
   private int k;

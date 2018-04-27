@@ -2,8 +2,8 @@ package Tool;
 
 /**
  * 异常检测的接口类
- *
- * Created by Mezereon on 2018/4/27.
+ * @author mezereon E-mail:mezereon@gmail.com
+ * @since 18-4-12
  */
 public interface DetectTool {
 
