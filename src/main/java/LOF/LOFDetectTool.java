@@ -35,7 +35,7 @@ public class LOFDetectTool implements DetectTool {
     double[][] mat = MatrixUtil.getMat(series, T, series.length - T - L + 1, L);
 
     //一个窗口大小的测试序列, 默认是原序列中最后窗口大小的序列
-    double[] test = MatrixUtil.getTestSeries(series, series.length - L - 1, L);;
+    double[] test = MatrixUtil.getTestSeries(series, series.length - L, L);;
 
     double[][] matC = MatrixUtil.getMatC(mat, T, series.length - T - L + 1, L);
     double[][] matT = MatrixUtil.getMatT(mat, T, series.length - T - L + 1, L);

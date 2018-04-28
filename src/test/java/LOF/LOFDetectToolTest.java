@@ -19,7 +19,7 @@ public class LOFDetectToolTest {
 
   @Test
   public void timeSeriesAnalyse() throws Exception {
-    LOFDetectTool lofDetectTool = new LOFDetectTool(200, 50);
+    LOFDetectTool lofDetectTool = new LOFDetectTool(200, 20);
     lofDetectTool.timeSeriesAnalyse(testData);
   }
 
