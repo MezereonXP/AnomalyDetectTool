@@ -11,6 +11,10 @@ import org.junit.Test;
  */
 public class HoltWintersToolTest {
 
+  private static final double ALPHA = 0.1;
+  private static final double STEP = 0.01;
+  private static final int TIMES = 1000;
+
   public double[] testData;
 
   @Before
@@ -20,10 +24,7 @@ public class HoltWintersToolTest {
 
   @Test
   public void timeSeriesAnalyse() throws Exception {
-    double alpha = 0.1;
-    double step = 0.01;
-    int times = 1000;
-    HoltWintersTool holtWintersTool = new HoltWintersTool(alpha, step, times);
+    HoltWintersTool holtWintersTool = new HoltWintersTool(ALPHA, STEP, TIMES);
     holtWintersTool.timeSeriesAnalyse(testData);
   }
 
