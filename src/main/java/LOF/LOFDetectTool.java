@@ -58,4 +58,28 @@ public class LOFDetectTool implements DetectTool {
     count /= matC.length;
     System.out.println("Anomaly Score is "+count);
   }
+
+  public int getT() {
+    return T;
+  }
+
+  public void setT(int t) {
+    T = t;
+  }
+
+  public int getL() {
+    return L;
+  }
+
+  public void setL(int l) {
+    L = l;
+  }
+
+  public int getK() {
+    return K;
+  }
+
+  public void setK(int k) {
+    K = k;
+  }
 }
