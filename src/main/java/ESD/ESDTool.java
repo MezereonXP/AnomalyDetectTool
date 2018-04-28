@@ -1,6 +1,7 @@
 package ESD;
 
 import Tool.DetectTool;
+import Tool.MathTool;
 
 /**
  * @program: AnomalyDetectTool
@@ -10,7 +11,19 @@ import Tool.DetectTool;
  **/
 public class ESDTool implements DetectTool{
 
+    private double average;
+
     public void timeSeriesAnalyse(double[] data) {
         //TODO: 2018/4/28 实现ESD算法
+        this.average = MathTool.getAverageFromArray(data);
+
+    }
+
+    public double getAverage() {
+        return average;
+    }
+
+    public void setAverage(double average) {
+        this.average = average;
     }
 }
