@@ -1,7 +1,7 @@
 # AnomalyDetectTool
 A tool of detecting anomaly points from data
 
-###LOF-ICAD 算法的使用
+### LOF-ICAD 算法的使用
 You can use this tool like：
 
 ```java
@@ -14,7 +14,7 @@ You can use this tool like：
 https://www.jianshu.com/p/ec40dd7b6b37
 
 
-###指数平滑模型的使用
+### 指数平滑模型的使用
 You can use this tool like：
 ```java
     HoltWintersTool holtWintersTool = new HoltWintersTool(ALPHA, STEP, TIMES);
