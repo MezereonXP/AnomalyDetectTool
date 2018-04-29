@@ -17,6 +17,12 @@ public class Experiment {
   public static final int T = 200;
   public static final int L = 50;
 
+  /**
+   * Test the LOF
+   *
+   * @param args
+   * @throws FileNotFoundException
+   */
   public static void main(String[] args) throws FileNotFoundException {
 
     double[] series = FileTool.getData("data.json");
