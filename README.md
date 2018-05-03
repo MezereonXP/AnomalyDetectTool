@@ -1,4 +1,4 @@
-# AnomalyDetectTool
+﻿# AnomalyDetectTool
 A tool of detecting anomaly points from data
 
 ### LOF-ICAD 算法的使用
@@ -19,4 +19,11 @@ You can use this tool like：
 ```java
     HoltWintersTool holtWintersTool = new HoltWintersTool(ALPHA, STEP, TIMES);
     holtWintersTool.timeSeriesAnalyse(testData);
+```
+
+###Grubbs模型的使用
+You can use this tool like：
+```java
+    GrubbsTool grubbsTool = new GrubbsTool (G_MAX);
+    grubbsTool.timeSeriesAnalyse(testData);
 ```
