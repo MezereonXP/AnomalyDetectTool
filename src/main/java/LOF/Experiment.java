@@ -50,20 +50,6 @@ public class Experiment {
     double[] scores = new double[series.length / L + 1];
 
     System.out.println("-------------------------------");
-//        for (int i=series.length/(2*L);i<series.length/L;i++) {
-//
-//            test = MatrixUtil.getTestSeries(series, i==0?0:L*i-1, L);
-//            ncmForTest = lof.getLOF(matT, test);
-//            double count = 0;
-//            for (double x : ncmForC) {
-//                if (ncmForTest <= x) {
-//                    count++;
-//                }
-//            }
-//            count /= matC.length;
-//            scores[i] = count;
-//            System.out.println(count+",");
-//        }
     test = MatrixUtil.getTestSeries(series, series.length - L - 1, L);
     ncmForTest = lof.getLOF(matT, test);
     double count = 0;
