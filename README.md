@@ -21,7 +21,7 @@ You can use this tool like：
     holtWintersTool.timeSeriesAnalyse(testData);
 ```
 
-###Grubbs模型的使用
+### Grubbs模型的使用
 You can use this tool like：
 ```java
     GrubbsTool grubbsTool = new GrubbsTool (G_MAX);
