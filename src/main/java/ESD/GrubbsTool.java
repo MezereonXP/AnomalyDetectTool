@@ -16,7 +16,13 @@ public class GrubbsTool implements DetectTool{
   private double average;// 平均值
   private double stdDeviation;// 样本标准差
   private double[] G;// 可疑值
-  private static final double G_MAX = 2.956;// 50个样本执行概率为95%的阈值
+  private static double G_MAX = 2.956;// 50个样本执行概率为95%的阈值
+
+  public GrubbsTool(){}
+  
+  public GrubbsTool(double g) {
+    G_MAX = g;
+  }
 
   public void timeSeriesAnalyse(double[] data) {
     average = MathTool.getAverageFromArray(data);
