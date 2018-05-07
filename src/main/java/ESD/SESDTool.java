@@ -7,5 +7,5 @@ package ESD;
  * @create: 2018-05-07 18:16
  **/
 public class SESDTool {
-    
+
 }
