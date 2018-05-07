@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.Reader;
 
 /**
- * @author mezereon E-mail:mezereon@gmail.com
+ * @author mezereon E-mail:mezereonxp@gmail.com
  * @since 18-4-26
  */
 public class Experiment {

@@ -12,7 +12,7 @@ import java.io.Reader;
 /**
  * 使用二阶指数平滑以及SGD进行自动化参数调整
  *
- * @author mezereon E-mail:mezereon@gmail.com
+ * @author mezereon E-mail:mezereonxp@gmail.com
  * @since 18-4-26
  */
 public class HoltWintersTool implements DetectTool {

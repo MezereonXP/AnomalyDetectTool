@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Local Outlier Factor
  *
- * @author mezereon E-mail:mezereon@gmail.com
+ * @author mezereon E-mail:mezereonxp@gmail.com
  * @since 18-4-12
  */
 public class LOF {

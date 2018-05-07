@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * JSON中的bean类
  *
- * @author mezereon E-mail:mezereon@gmail.com
+ * @author mezereon E-mail:mezereonxp@gmail.com
  * @since 18-4-12
  */
 
