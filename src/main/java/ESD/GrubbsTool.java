@@ -1,5 +1,6 @@
 package ESD;
 
+import Result.Result;
 import Tool.DetectTool;
 import Tool.MathTool;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class GrubbsTool implements DetectTool{
   private double stdDeviation;// 样本标准差
   private double[] G;// 可疑值
   private static double G_MAX = 2.956;// 50个样本执行概率为95%的阈值
+  private ArrayList<Result> results;// 结果集
 
   public GrubbsTool(){}
   
@@ -25,15 +27,21 @@ public class GrubbsTool implements DetectTool{
   }
 
   public void timeSeriesAnalyse(double[] data) {
+    results = new ArrayList<Result>();
     average = MathTool.getAverageFromArray(data);
     stdDeviation = MathTool.getStdDeviation(data);
     G = new double[data.length];
     for (int i = 0; i < data.length; i++){
       G[i] = (data[i] - average)/stdDeviation;
       if (G[i]>G_MAX){
+        results.add(new Result(i, data[i]));
         System.out.println("Anomaly point! value is : "+data[i]);
       }
     }
+  }
+
+  public ArrayList<Result> getResults() {
+    return this.results;
   }
 
   public double getAverage() {

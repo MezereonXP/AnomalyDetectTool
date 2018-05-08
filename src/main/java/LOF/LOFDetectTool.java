@@ -1,7 +1,10 @@
 package LOF;
 
+import Result.Result;
 import Tool.DetectTool;
 import Util.MatrixUtil;
+
+import java.util.ArrayList;
 
 /**
  * @author mezereon E-mail:mezereonxp@gmail.com
@@ -12,6 +15,7 @@ public class LOFDetectTool implements DetectTool {
   private int T;// 时间序列用来训练的长度
   private int L;// 时间序列的所利用的窗口长度
   private int K = 1;//  LOF算法中的k值, 默认设置为1, 也就是取历史最相似的序列进行预测
+  private ArrayList<Result> results;
 
   /**
    * LOF检测工具的构造方法
@@ -81,5 +85,13 @@ public class LOFDetectTool implements DetectTool {
 
   public void setK(int k) {
     K = k;
+  }
+
+  public ArrayList<Result> getResults() {
+    return results;
+  }
+
+  public void setResults(ArrayList<Result> results) {
+    this.results = results;
   }
 }
