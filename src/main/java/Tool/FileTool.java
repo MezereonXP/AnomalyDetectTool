@@ -27,8 +27,9 @@ public class FileTool {
     int i = 0;
     for (Item item : items) {
       series[i++] = item.getEvent().getTotal_count() / (60 * 60 * 1000);
-      System.out.println(item.getEvent().getTotal_count() / (60 * 60 * 1000) );
+      System.out.print(item.getEvent().getTotal_count() / (60 * 60 * 1000) +", ");
     }
+    System.out.println();
     return series;
 
   }
