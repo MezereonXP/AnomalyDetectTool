@@ -1,6 +1,7 @@
 package ExponentialMoving;
 
 import ReadJson.Item;
+import Result.Result;
 import Tool.DetectTool;
 import Tool.FileTool;
 import com.google.gson.Gson;
@@ -8,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.ArrayList;
 
 /**
  * 使用二阶指数平滑以及SGD进行自动化参数调整
@@ -27,6 +29,7 @@ public class HoltWintersTool implements DetectTool {
 
   private double[] ds1;//   s1的对应偏导数
   private double[] ds2;//   s2的对应偏导数
+  private ArrayList<Result> results;
 
   /**
    *
@@ -44,6 +47,7 @@ public class HoltWintersTool implements DetectTool {
    * 利用二阶指数平滑对时序数据进行异常检测
    */
   public void timeSeriesAnalyse(double[] data) {
+    results = new ArrayList<Result>();
     initial(data.length);
     trainModel(data);
     testModel(data);
@@ -175,5 +179,13 @@ public class HoltWintersTool implements DetectTool {
 
   public void setAlpha(double alpha) {
     this.alpha = alpha;
+  }
+
+  public ArrayList<Result> getResults() {
+    return results;
+  }
+
+  public void setResults(ArrayList<Result> results) {
+    this.results = results;
   }
 }

@@ -18,10 +18,17 @@ public class ESDTool implements DetectTool {
     private double stdDeviation;// 方差
     private int K;// 第k个值
     private double t;// t统计量
+    private double[] g;// Grubbs统计量
     private ArrayList<Result> results;
 
+    ESDTool(int k){
+        this.K = k;
+        this.g = new double[k];
+    }
+
     public void timeSeriesAnalyse(double[] data) {
-        //TODO: 2018/4/28 实现ESD算法
+
+        initG(data);
         this.average = MathTool.getAverageFromArray(data);
         this.stdDeviation = MathTool.getStdDeviation(data);
 
@@ -41,6 +48,16 @@ public class ESDTool implements DetectTool {
             if (count == K) {
                 results = tempResults;
             }
+        }
+
+    }
+
+    private void initG(double[] data) {
+        double[] temp = data.clone();
+        double tempAvg = MathTool.getAverageFromArray(temp);
+        double tempS = MathTool.getStdDeviation(temp);
+        for (int i=0;i<K;i++){
+
         }
 
     }
@@ -101,5 +118,13 @@ public class ESDTool implements DetectTool {
 
     public void setResults(ArrayList<Result> results) {
         this.results = results;
+    }
+
+    public double[] getG() {
+        return g;
+    }
+
+    public void setG(double[] g) {
+        this.g = g;
     }
 }

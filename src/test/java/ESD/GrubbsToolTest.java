@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 
-class ESDToolTest {
+class GrubbsToolTest {
 
     public double[] testData;
 
@@ -20,8 +20,8 @@ class ESDToolTest {
 
     @Test
     void timeSeriesAnalyse() {
-        ESDTool esdTool = new ESDTool(10);
-        esdTool.timeSeriesAnalyse(testData);
-        DisplayTool.showResult(esdTool);
+        GrubbsTool grubbsTool = new GrubbsTool();
+        grubbsTool.timeSeriesAnalyse(testData);
+        DisplayTool.showResult(grubbsTool);
     }
 }
