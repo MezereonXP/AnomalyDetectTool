@@ -1,5 +1,6 @@
 package ExponentialMoving;
 
+import Tool.DisplayTool;
 import static org.junit.Assert.*;
 
 import Tool.FileTool;
@@ -26,6 +27,7 @@ public class HoltWintersToolTest {
   public void timeSeriesAnalyse() throws Exception {
     HoltWintersTool holtWintersTool = new HoltWintersTool(ALPHA, STEP, TIMES);
     holtWintersTool.timeSeriesAnalyse(testData);
+    DisplayTool.showResult(holtWintersTool);
   }
 
 }

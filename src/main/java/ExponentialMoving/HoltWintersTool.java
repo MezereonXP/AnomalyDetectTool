@@ -30,6 +30,7 @@ public class HoltWintersTool implements DetectTool {
   private double[] ds1;//   s1的对应偏导数
   private double[] ds2;//   s2的对应偏导数
   private ArrayList<Result> results;
+  private double THREADHOLD = 0.2;
 
   /**
    *
@@ -114,7 +115,8 @@ public class HoltWintersTool implements DetectTool {
       double B = (alpha / (1 - alpha)) * (s1[i] - s2[i]);
 //                double predict = A + B * 1;
       double predict = s2[i];
-      if (Math.abs(predict - data[i]) > 0.2) {
+      if (Math.abs(predict - data[i]) > THREADHOLD) {
+        results.add(new Result(i, data[i]));
         System.out.println(data[i - 1] + "," + data[i] + "--------predict: " + predict);
       }
     }
@@ -187,5 +189,13 @@ public class HoltWintersTool implements DetectTool {
 
   public void setResults(ArrayList<Result> results) {
     this.results = results;
+  }
+
+  public double getTHREADHOLD() {
+    return THREADHOLD;
+  }
+
+  public void setTHREADHOLD(double THREADHOLD) {
+    this.THREADHOLD = THREADHOLD;
   }
 }
