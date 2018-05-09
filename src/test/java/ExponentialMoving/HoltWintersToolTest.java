@@ -1,8 +1,6 @@
 package ExponentialMoving;
 
 import Tool.DisplayTool;
-import static org.junit.Assert.*;
-
 import Tool.FileTool;
 import org.junit.Before;
 import org.junit.Test;

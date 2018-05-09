@@ -1,11 +1,8 @@
 package Tool;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.platform.commons.logging.Logger;
 
 /**
  * @program: MathToolTest
