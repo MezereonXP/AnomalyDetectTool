@@ -5,6 +5,7 @@ import Tool.DetectTool;
 import Tool.MathTool;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @program: AnomalyDetectTool
@@ -20,19 +21,18 @@ public class BruteForceTool implements DetectTool {
 
     BruteForceTool(int length) {
         this.length = length;
-        results = new ArrayList<Result>();
     }
 
     public void timeSeriesAnalyse(double[] data) {
-
+        results = new ArrayList<Result>();
         double bestDist = 0;
         int bestLoc = -1;
 
         for (int p = 0; p < data.length - length + 1; p++) {
             double tempDist = Double.MAX_VALUE;
             for (int q = 0; q < data.length - length + 1; q++){
-                if (Math.abs(p-q) >= length && dist(data, p, q, length) < tempDist){
-                    tempDist = dist(data, p, q, length);
+                if (Math.abs(p-q) >= length && MathTool.dist(data, p, q, length) < tempDist){
+                    tempDist = MathTool.dist(data, p, q, length);
                 }
             }
             if (tempDist > bestDist){
@@ -43,15 +43,7 @@ public class BruteForceTool implements DetectTool {
         results.add(new Result(bestLoc, data[bestLoc]));
     }
 
-    private double dist(double[] data, int p, int q, int length) {
-        double dist = 0;
-        for (int i = 0;i < length; i++){
-            dist += Math.pow(data[p+i]-data[q+i], 2);
-        }
-        return Math.sqrt(dist);
-    }
-
-    public ArrayList<Result> getResults() {
+    public List<Result> getResults() {
         return results;
     }
 
