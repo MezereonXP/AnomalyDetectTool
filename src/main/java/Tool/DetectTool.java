@@ -3,6 +3,7 @@ package Tool;
 import Result.Result;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 异常检测的接口类
@@ -16,5 +17,5 @@ public interface DetectTool {
    */
   void timeSeriesAnalyse(double[] data);
 
-  ArrayList<Result> getResults();
+  List<Result> getResults();
 }

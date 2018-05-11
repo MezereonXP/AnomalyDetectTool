@@ -17,7 +17,7 @@ public class GrubbsTool implements DetectTool{
   private double average;// 平均值
   private double stdDeviation;// 样本标准差
   private double[] G;// 可疑值
-  private static double G_MAX = 2.956;// 50个样本执行概率为95%的阈值
+  private double G_MAX = 3.754;// 100个样本执行概率为99.50%的阈值
   private ArrayList<Result> results;// 结果集
 
   public GrubbsTool(){}
