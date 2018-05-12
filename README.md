@@ -27,3 +27,18 @@ You can use this tool like：
     GrubbsTool grubbsTool = new GrubbsTool (G_MAX);
     grubbsTool.timeSeriesAnalyse(testData);
 ```
+
+### BF模型的使用
+You can use this tool like：
+```java
+    BruteForceTool bruteForceTool = new BruteForceTool(10);
+    bruteForceTool.timeSeriesAnalyse(data);
+```
+
+### 结果显示工具的使用
+You can use this tool like：
+```java
+    BruteForceTool bruteForceTool = new BruteForceTool(10);
+    bruteForceTool.timeSeriesAnalyse(data);
+    DisplayTool.showResult(bruteForceTool);
+```
