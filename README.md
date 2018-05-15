@@ -35,6 +35,13 @@ You can use this tool like：
     bruteForceTool.timeSeriesAnalyse(data);
 ```
 
+### Heuristic模型的使用
+You can use this tool like：
+```java
+    HeuristicTool heuristicTool = new HeuristicTool(3);
+    heuristicTool.timeSeriesAnalyse(testData);
+```
+    
 ### 结果显示工具的使用
 You can use this tool like：
 ```java
