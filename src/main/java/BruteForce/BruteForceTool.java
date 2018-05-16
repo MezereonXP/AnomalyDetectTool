@@ -19,7 +19,7 @@ public class BruteForceTool implements DetectTool {
 
     private int length;
 
-    BruteForceTool(int length) {
+    public BruteForceTool(int length) {
         this.length = length;
     }
 
