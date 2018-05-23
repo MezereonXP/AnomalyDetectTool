@@ -21,6 +21,10 @@ You can use this tool like：
     holtWintersTool.timeSeriesAnalyse(testData);
 ```
 
+关于其算法细节可以查看我的文章，给出地址：
+https://www.jianshu.com/p/a2dbd47b3f1a
+
+
 ### Grubbs模型的使用
 You can use this tool like：
 ```java
