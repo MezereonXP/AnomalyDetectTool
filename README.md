@@ -49,3 +49,9 @@ You can use this tool like：
     bruteForceTool.timeSeriesAnalyse(data);
     DisplayTool.showResult(bruteForceTool);
 ```
+### isolation tree使用
+You can use this tool like：
+```java
+    IsolaitonTool isolationTool = new IsolationTool();
+    isolationtimeSeriesAnalyse(data);
+```
