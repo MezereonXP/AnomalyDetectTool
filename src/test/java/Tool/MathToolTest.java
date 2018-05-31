@@ -26,6 +26,11 @@ public class MathToolTest {
   }
 
   @Test
+  public void normalize() throws Exception {
+    Assert.assertEquals(MathTool.normalize(testArray)[1], 0.25, 0.1);
+  }
+
+  @Test
   public void getAverageFromArray() throws Exception {
     Assert.assertEquals(MathTool.getAverageFromArray(testArray), 2.0, 0.0);
   }
