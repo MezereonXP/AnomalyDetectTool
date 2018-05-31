@@ -13,10 +13,18 @@ public class IsolationTreeTool implements DetectTool {
     private IsolationForest forest;
     @Override
     public void timeSeriesAnalyse(double[] data) {
+        this.results = new ArrayList<Result>();
         IsolationForest forest = new IsolationForest(100,256);
         forest.createForest(data.clone());
         this.forest = forest;
+        cutAnomaly(data,0.6f);
     }
+
+    /**
+     * 选出所有异常值
+     * @param data
+     * @param factor
+     */
     public void cutAnomaly(double[] data,float factor){
         for (int i = 0;i < data.length;i++){
             if (this.forest.searchForest(data[i]) > factor){
