@@ -45,6 +45,13 @@ You can use this tool like：
     HeuristicTool heuristicTool = new HeuristicTool(3);
     heuristicTool.timeSeriesAnalyse(testData);
 ```
+
+### Isolation Tree模型的使用
+You can use this tool like：
+```java
+    IsolaitonTool isolationTool = new IsolationTool();
+    isolationtimeSeriesAnalyse(data);
+```
     
 ### 结果显示工具的使用
 You can use this tool like：
@@ -52,10 +59,4 @@ You can use this tool like：
     BruteForceTool bruteForceTool = new BruteForceTool(10);
     bruteForceTool.timeSeriesAnalyse(data);
     DisplayTool.showResult(bruteForceTool);
-```
-### isolation tree使用
-You can use this tool like：
-```java
-    IsolaitonTool isolationTool = new IsolationTool();
-    isolationtimeSeriesAnalyse(data);
 ```
