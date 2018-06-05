@@ -10,11 +10,13 @@ public class MathTool {
 
     private MathTool() {
     }
+
     public static double EulerConstant = 0.57721566490153286060651209;
+
     /**
      * 计算两个长度为n的序列的欧几里德距离并返回
      *
-     * @param data  时间序列数据
+     * @param data 时间序列数据
      * @param p 序列1的开始位置
      * @param q 序列2的开始位置
      * @param length 序列的长度
@@ -22,8 +24,8 @@ public class MathTool {
      */
     public static double dist(double[] data, int p, int q, int length) {
         double dist = 0;
-        for (int i = 0;i < length; i++){
-            dist += Math.pow(data[p+i]-data[q+i], 2);
+        for (int i = 0; i < length; i++) {
+            dist += Math.pow(data[p + i] - data[q + i], 2);
         }
         return Math.sqrt(dist);
     }
@@ -87,10 +89,11 @@ public class MathTool {
         }
         return Math.sqrt(sum / (array.length - 1));
     }
+
     /**
      * 计算以二为底的对数
      */
-    public static double log2(double value){
-        return Math.log(value)/Math.log(2);
+    public static double log2(double value) {
+        return Math.log(value) / Math.log(2);
     }
 }

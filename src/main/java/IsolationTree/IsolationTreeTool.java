@@ -10,6 +10,7 @@ public class IsolationTreeTool implements DetectTool {
 
     private int maxTreeNum = 100;
     private int maxSampling = 256;
+    private double factor = 0.6f;
 
     private ArrayList<Result> results;
     private IsolationForest forest;
@@ -27,7 +28,7 @@ public class IsolationTreeTool implements DetectTool {
         IsolationForest tempForest = new IsolationForest(maxTreeNum, maxSampling);
         tempForest.createForest(data.clone());
         this.forest = tempForest;
-        cutAnomaly(data, 0.6f);
+        cutAnomaly(data, factor);
     }
 
     /**
@@ -36,7 +37,7 @@ public class IsolationTreeTool implements DetectTool {
      * @param data
      * @param factor
      */
-    public void cutAnomaly(double[] data, float factor) {
+    public void cutAnomaly(double[] data, double factor) {
         for (int i = 0; i < data.length; i++) {
             if (this.forest.searchForest(data[i]) > factor) {
                 this.results.add(new Result(i, data[i]));
@@ -63,5 +64,13 @@ public class IsolationTreeTool implements DetectTool {
 
     public void setMaxTreeNum(int maxTreeNum) {
         this.maxTreeNum = maxTreeNum;
+    }
+
+    public double getFactor() {
+        return factor;
+    }
+
+    public void setFactor(double factor) {
+        this.factor = factor;
     }
 }
