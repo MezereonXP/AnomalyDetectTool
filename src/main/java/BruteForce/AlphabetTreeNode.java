@@ -41,7 +41,7 @@ public class AlphabetTreeNode {
      * @return
      */
     public boolean isHaveLabel(char label) {
-        return getNodeByLabel(label)!=null;
+        return getNodeByLabel(label) != null;
     }
 
     /**
@@ -50,7 +50,7 @@ public class AlphabetTreeNode {
      * @param label
      * @return
      */
-    public AlphabetTreeNode getNodeByLabel(char label){
+    public AlphabetTreeNode getNodeByLabel(char label) {
         for (AlphabetTreeNode node : nodeList) {
             if (node.label == label) {
                 return node;
@@ -59,9 +59,9 @@ public class AlphabetTreeNode {
         return null;
     }
 
-    public void increase(char label){
-        for (Notes notes:getNodeByLabel(label).notes){
-            notes.setCount(notes.getCount()+1);
+    public void increase(char label) {
+        for (Notes notes : getNodeByLabel(label).notes) {
+            notes.setCount(notes.getCount() + 1);
         }
     }
 

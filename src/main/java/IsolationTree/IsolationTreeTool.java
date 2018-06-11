@@ -15,7 +15,8 @@ public class IsolationTreeTool implements DetectTool {
     private ArrayList<Result> results;
     private IsolationForest forest;
 
-    public IsolationTreeTool(){}
+    public IsolationTreeTool() {
+    }
 
     public IsolationTreeTool(int maxTreeNum, int maxSampling) {
         this.maxTreeNum = maxTreeNum;

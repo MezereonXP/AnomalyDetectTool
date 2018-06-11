@@ -24,7 +24,7 @@ public class AlphabetTree {
             }
             if (position == chars.length - 1) {
                 temp.getNodeByLabel(c).getNotes().add(note);
-                if (temp.getNodeByLabel(c).getNotes().size()>1) {
+                if (temp.getNodeByLabel(c).getNotes().size() > 1) {
                     temp.increase(c);
                 }
             }

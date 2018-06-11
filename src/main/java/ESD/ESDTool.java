@@ -21,7 +21,7 @@ public class ESDTool implements DetectTool {
     private double[] g;// Grubbs统计量
     private ArrayList<Result> results;
 
-    ESDTool(int k){
+    ESDTool(int k) {
         this.K = k;
         this.g = new double[k];
     }
@@ -56,7 +56,7 @@ public class ESDTool implements DetectTool {
         double[] temp = data.clone();
         double tempAvg = MathTool.getAverageFromArray(temp);
         double tempS = MathTool.getStdDeviation(temp);
-        for (int i=0;i<K;i++){
+        for (int i = 0; i < K; i++) {
 
         }
 
@@ -64,8 +64,8 @@ public class ESDTool implements DetectTool {
 
     public double getKExtremeValue(double[] data, int k) {
         double[] temp = data.clone();
-        for (int i = 0;i < data.length; i++){
-            temp[i] = Math.abs(temp[i] - average)/stdDeviation;
+        for (int i = 0; i < data.length; i++) {
+            temp[i] = Math.abs(temp[i] - average) / stdDeviation;
         }
 
         for (int i = 0; i < k + 1; i++) {

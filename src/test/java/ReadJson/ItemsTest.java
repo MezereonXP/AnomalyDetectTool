@@ -14,6 +14,7 @@ public class ItemsTest {
     private static final int SIZE = 1;
     private static final int NEW_SIZE = 2;
     private static final String TIME_STAMP = "111400000000";
+
     @Before
     public void setUp() {
         ArrayList<Item> itemArrayList = new ArrayList<Item>();

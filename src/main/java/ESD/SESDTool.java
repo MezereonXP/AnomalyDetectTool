@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author: mezereonxp Email: mezereonxp@gmail.com
  * @create: 2018-05-07 18:16
  **/
-public class SESDTool implements DetectTool{
+public class SESDTool implements DetectTool {
 
     private double t;// t统计量
     private ArrayList<Result> results;
@@ -19,7 +19,7 @@ public class SESDTool implements DetectTool{
     /**
      * constructor
      */
-    SESDTool(){
+    SESDTool() {
 
     }
 

@@ -17,7 +17,7 @@ public class Result {
 
     @Override
     public String toString() {
-        return "Index is "+index+",  value is "+value;
+        return "Index is " + index + ",  value is " + value;
     }
 
     public int getIndex() {

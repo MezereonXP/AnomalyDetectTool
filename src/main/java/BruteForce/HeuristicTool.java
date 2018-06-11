@@ -49,12 +49,12 @@ public class HeuristicTool implements DetectTool {
         int bestLoc = -1;
         notes.get(index).setVisited(true);
         double tempDist = Double.MAX_VALUE;
-        for (int q = 0; q < data.length - length + 1; q++){
-            if (Math.abs(index-q) >= length && MathTool.dist(data, index, q, length) < tempDist){
+        for (int q = 0; q < data.length - length + 1; q++) {
+            if (Math.abs(index - q) >= length && MathTool.dist(data, index, q, length) < tempDist) {
                 tempDist = MathTool.dist(data, index, q, length);
             }
         }
-        if (tempDist > bestDist){
+        if (tempDist > bestDist) {
             bestDist = tempDist;
             bestLoc = index;
         }
@@ -63,8 +63,8 @@ public class HeuristicTool implements DetectTool {
             if (!notes.get(p).isVisited()) {
                 tempDist = Double.MAX_VALUE;
                 for (int q = 0; q < data.length - length + 1; q++) {
-                    if (Math.abs(p - q) >= length && MathTool.dist(data, p, q, length) < bestDist){
-                        if (tempDist == Double.MAX_VALUE){
+                    if (Math.abs(p - q) >= length && MathTool.dist(data, p, q, length) < bestDist) {
+                        if (tempDist == Double.MAX_VALUE) {
                             tempDist = Double.MIN_VALUE;
                         }
                         break;

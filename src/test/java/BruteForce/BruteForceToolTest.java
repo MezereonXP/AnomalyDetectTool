@@ -2,7 +2,6 @@ package BruteForce;
 
 import Tool.DisplayTool;
 import Tool.FileTool;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Before;
 import org.junit.Test;
 

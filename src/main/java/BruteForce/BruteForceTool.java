@@ -30,12 +30,12 @@ public class BruteForceTool implements DetectTool {
 
         for (int p = 0; p < data.length - length + 1; p++) {
             double tempDist = Double.MAX_VALUE;
-            for (int q = 0; q < data.length - length + 1; q++){
-                if (Math.abs(p-q) >= length && MathTool.dist(data, p, q, length) < tempDist){
+            for (int q = 0; q < data.length - length + 1; q++) {
+                if (Math.abs(p - q) >= length && MathTool.dist(data, p, q, length) < tempDist) {
                     tempDist = MathTool.dist(data, p, q, length);
                 }
             }
-            if (tempDist > bestDist){
+            if (tempDist > bestDist) {
                 bestDist = tempDist;
                 bestLoc = p;
             }

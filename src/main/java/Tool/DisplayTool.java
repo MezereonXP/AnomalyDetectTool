@@ -9,14 +9,14 @@ import Result.Result;
  * @create: 2018-05-08 14:43
  **/
 public class DisplayTool {
-    public static void showResult(DetectTool detectTool){
+    public static void showResult(DetectTool detectTool) {
 
         for (Result result : detectTool.getResults()) {
-            System.out.print(result.getIndex()+", ");
+            System.out.print(result.getIndex() + ", ");
         }
         System.out.println();
         for (Result result : detectTool.getResults()) {
-            System.out.print(result.getValue()+", ");
+            System.out.print(result.getValue() + ", ");
         }
     }
 }

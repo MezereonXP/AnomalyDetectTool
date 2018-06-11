@@ -1,7 +1,6 @@
 package Tool;
 
 import BruteForce.BruteForceTool;
-import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
