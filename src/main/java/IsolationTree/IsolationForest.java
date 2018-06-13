@@ -26,20 +26,22 @@ public class IsolationForest {
      */
     public void createForest(double[] data) {
         this.dataLengeth = data.length;
-        boolean isSample = true;
+        boolean isSample = false;
         if (data.length > this.subSamplingNum) {
-            isSample = false;
+            isSample = true;
         }
         for (int i = 0; i < maxTreeNum; i++) {
             IsolationTree iTree = new IsolationTree();
-            if (isSample) data = subSampling(data);
+            if (isSample) {
+                data = subSampling(data);
+            }
             iTree.create(data, this.maxTreeHeight);
             forest.add(iTree);
         }
     }
 
     /**
-     * 从森林中查找数值d 的深度
+     * 从森林中查找数值d 的深度, 返回一个异常分数
      *
      * @param d
      * @return
@@ -63,7 +65,7 @@ public class IsolationForest {
         int n = data.length;
         double[] sample = new double[this.subSamplingNum];
         for (int i = 0; i < this.subSamplingNum; i++) {
-            int r = new Random().nextInt() * n;
+            int r = new Random().nextInt(n);
             sample[i] = data[r];
             data[r] = data[--n];
         }
