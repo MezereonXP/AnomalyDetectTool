@@ -10,4 +10,13 @@ public class IsolationTreeNode {
         this.divdNum = divdNum;
     }
 
+    /**
+     * 判断是否是外部节点（叶子节点）
+     *
+     * @return
+     */
+    public boolean isExtenal() {
+        return (this.left == null && this.right == null);
+    }
+
 }

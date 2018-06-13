@@ -37,13 +37,13 @@ public class IsolationTree {
         }
         double min = data[start];
         double max = data[end];
-        double divd;
-        do {
-            divd = min + Math.random() * max;
-        } while (divd <= min || divd >= max);
+        double divd = min + Math.random() * (max - min);
+
         int i;
         for (i = start; i <= end; i++) {
-            if (data[i] > divd) break;
+            if (data[i] >= divd) {
+                break;
+            }
         }
         IsolationTreeNode node = new IsolationTreeNode(divd);
         node.left = createByR(data, currentHeight + 1, maxHeight, start, i - 1);
@@ -70,10 +70,10 @@ public class IsolationTree {
      * @return
      */
     private double pathLengthM(double x, IsolationTreeNode node, int currHeight) {
-        if (node.left == null || node.right == null) {
+        if (node.isExtenal()) {
             return currHeight + e(node.size);
         }
-        if (x > node.divdNum) {
+        if (x >= node.divdNum) {
             return pathLengthM(x, node.right, currHeight + 1);
         } else {
             return pathLengthM(x, node.left, currHeight + 1);
