@@ -1,4 +1,6 @@
 ﻿# AnomalyDetectTool
+[![BCH compliance](https://bettercodehub.com/edge/badge/MezereonXP/AnomalyDetectTool?branch=master)](https://bettercodehub.com/)
+
 A tool of detecting anomaly points from data
 
 ### LOF-ICAD 算法的使用
