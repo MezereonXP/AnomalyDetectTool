@@ -65,10 +65,7 @@ public class IsolationForest {
         int n = data.length;
         double[] sample = new double[this.subSamplingNum];
         for (int i = 0; i < this.subSamplingNum; i++) {
-            double divd;
--           do {
--               divd = min + Math.random(max);
--           } while (divd <= min || divd >= max);
+            int r = new Random().nextInt(n);
             sample[i] = data[r];
             data[r] = data[--n];
         }
