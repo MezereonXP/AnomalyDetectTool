@@ -39,5 +39,4 @@ public class MathToolTest {
     public void getStdDeviation() throws Exception {
         Assert.assertEquals(MathTool.getStdDeviation(testArray), 1.581138, DELTA);
     }
-
 }
