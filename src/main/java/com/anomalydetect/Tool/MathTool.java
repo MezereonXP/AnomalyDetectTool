@@ -31,6 +31,25 @@ public class MathTool {
     }
 
     /**
+     * 计算两个长度为n的多维度序列的欧几里德距离并返回
+     *
+     * @param data 时间序列数据
+     * @param p 序列1的开始位置
+     * @param q 序列2的开始位置
+     * @param length 序列的长度
+     * @return
+     */
+    public static double distForMulti(double[][] data, int p, int q, int length, int n) {
+        double dist = 0;
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < n; j++) {
+                dist += Math.pow(data[p + i][j] - data[q + i][j], 2);
+            }
+        }
+        return Math.sqrt(dist);
+    }
+
+    /**
      * 正态化
      *
      * @param data
