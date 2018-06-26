@@ -9,15 +9,32 @@ package com.anomalydetect.Result;
 public class Result {
     private int index;
     private double value;
+    private double[] multiValue;
+    private Boolean isMuti;
+
+    public Result(int index, double[] multiValue) {
+        this.index = index;
+        this.multiValue = multiValue;
+        this.isMuti = true;
+    }
 
     public Result(int index, double value) {
         this.index = index;
         this.value = value;
+        this.isMuti = false;
     }
 
     @Override
     public String toString() {
-        return "Index is " + index + ",  value is " + value;
+        String result = "Index is " + index + ",  value is ";
+        if (isMuti) {
+            for (double d : multiValue) {
+                result += "[ " + d + " ],";
+            }
+            return result;
+        } else {
+            return "Index is " + index + ",  value is " + value;
+        }
     }
 
     public int getIndex() {
@@ -34,5 +51,13 @@ public class Result {
 
     public void setValue(double value) {
         this.value = value;
+    }
+
+    public Boolean getMuti() {
+        return isMuti;
+    }
+
+    public void setMuti(Boolean muti) {
+        isMuti = muti;
     }
 }

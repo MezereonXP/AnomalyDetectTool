@@ -11,5 +11,5 @@ public interface MultiDetectTool {
     /**
      * 对时间序列进行异常检测
      */
-    void multiTimeSeriesAnalyse(double[][] data);
+    void multiTimeSeriesAnalyse(double[][] data, int dimension);
 }
