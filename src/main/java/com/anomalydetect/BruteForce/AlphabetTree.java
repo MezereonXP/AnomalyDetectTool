@@ -6,7 +6,7 @@ package com.anomalydetect.BruteForce;
  * @author: mezereonxp Email: mezereonxp@gmail.com
  * @create: 2018-05-11 14:12
  **/
-class AlphabetTree {
+public class AlphabetTree {
 
     private AlphabetTreeNode head;
 
@@ -14,7 +14,7 @@ class AlphabetTree {
         head = new AlphabetTreeNode(false, initChar, true);
     }
 
-    void addNote(Notes note) {
+    public void addNote(Notes note) {
         char[] chars = note.getData();
         AlphabetTreeNode temp = head;
         int position = 0;
