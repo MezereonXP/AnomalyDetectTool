@@ -29,7 +29,7 @@ public class HeuristicTool implements DetectTool {
     public void timeSeriesAnalyse(double[] data) {
         double[] nums = MathTool.gassian(data);
         char[] chars = saxConvert(nums);
-        results = new ArrayList<Result>();
+        results = new ArrayList<>();
 
         ArrayList<Notes> notes = new ArrayList<>();
 
