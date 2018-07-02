@@ -6,7 +6,7 @@ package BruteForce;
  * @author: mezereonxp Email: mezereonxp@gmail.com
  * @create: 2018-05-11 14:12
  **/
-public class AlphabetTree {
+class AlphabetTree {
 
     private AlphabetTreeNode head;
 
@@ -14,7 +14,7 @@ public class AlphabetTree {
         head = new AlphabetTreeNode(false, initChar, true);
     }
 
-    public void addNote(Notes note) {
+    void addNote(Notes note) {
         char[] chars = note.getData();
         AlphabetTreeNode temp = head;
         int position = 0;
@@ -36,10 +36,10 @@ public class AlphabetTree {
     /**
      * 给节点加上子节点
      *
-     * @param node
-     * @param initChar
-     * @param ways
-     * @param isLeaf
+     * @param node 节点
+     * @param initChar 初始字符
+     * @param ways 分成几个类别的字符
+     * @param isLeaf 是否是叶节点
      */
     private void addNodes(AlphabetTreeNode node, char initChar, int ways, boolean isLeaf) {
         for (int i = 0; i < ways; i++) {
