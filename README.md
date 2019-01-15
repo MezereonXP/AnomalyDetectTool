@@ -52,7 +52,7 @@ You can use this tool like：
 You can use this tool like：
 ```java
     IsolaitonTool isolationTool = new IsolationTool();
-    isolationtimeSeriesAnalyse(data);
+    isolationTreeTool.timeSeriesAnalyse(testData);
 ```
     
 ### 结果显示工具的使用
