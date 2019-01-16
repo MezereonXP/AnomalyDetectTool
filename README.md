@@ -3,6 +3,15 @@
 
 A tool of detecting anomaly points from data
 
+现在已经传到中央仓库, 可以直接在依赖添加如下代码来使用
+```xml
+<dependency>
+  <groupId>com.github.mezereonxp</groupId>
+  <artifactId>AnomalyDetectTool</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
 ### LOF-ICAD 算法的使用
 You can use this tool like：
 
