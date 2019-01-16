@@ -16,7 +16,7 @@ public class IsolationForest {
         this.subSamplingNum = maxSampling;
         this.maxTreeNum = maxTreeNum;
         this.maxTreeHeight = (int) Math.ceil(MathTool.log2(maxSampling));
-        this.forest = new ArrayList<>(maxTreeNum);
+        this.forest = new ArrayList<IsolationTree>(maxTreeNum);
     }
 
     /**

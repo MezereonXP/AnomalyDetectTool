@@ -22,16 +22,16 @@ public class HeuristicTool implements DetectTool {
 
     HeuristicTool(int w) {
         this.w = w;
-        results = new ArrayList<>();
+        results = new ArrayList<Result>();
     }
 
     @Override
     public void timeSeriesAnalyse(double[] data) {
         double[] nums = MathTool.gassian(data);
         char[] chars = saxConvert(nums);
-        results = new ArrayList<>();
+        results = new ArrayList<Result>();
 
-        ArrayList<Notes> notes = new ArrayList<>();
+        ArrayList<Notes> notes = new ArrayList<Notes>();
 
         AlphabetTree tree = new AlphabetTree(initChar, w, a);
         for (int i = 0; i < data.length - w + 1; i++) {

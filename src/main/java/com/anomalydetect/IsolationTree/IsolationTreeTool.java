@@ -25,7 +25,7 @@ public class IsolationTreeTool implements DetectTool {
 
     @Override
     public void timeSeriesAnalyse(double[] data) {
-        this.results = new ArrayList<>();
+        this.results = new ArrayList<Result>();
         IsolationForest tempForest = new IsolationForest(maxTreeNum, maxSampling);
         tempForest.createForest(data.clone());
         this.forest = tempForest;

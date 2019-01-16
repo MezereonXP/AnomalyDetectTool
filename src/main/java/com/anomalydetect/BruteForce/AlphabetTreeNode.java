@@ -28,9 +28,9 @@ public class AlphabetTreeNode {
         this.isLeaf = isLeaf;
         this.label = label;
         this.isRoot = isRoot;
-        nodeList = new ArrayList<>();
+        nodeList = new ArrayList<AlphabetTreeNode>();
         if (isLeaf) {
-            notes = new ArrayList<>();
+            notes = new ArrayList<Notes>();
         }
     }
 
