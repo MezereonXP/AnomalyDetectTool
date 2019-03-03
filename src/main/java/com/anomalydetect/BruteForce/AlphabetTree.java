@@ -36,10 +36,10 @@ public class AlphabetTree {
     /**
      * 给节点加上子节点
      *
-     * @param node 节点
+     * @param node     节点
      * @param initChar 初始字符
-     * @param ways 分成几个类别的字符
-     * @param isLeaf 是否是叶节点
+     * @param ways     分成几个类别的字符
+     * @param isLeaf   是否是叶节点
      */
     private void addNodes(AlphabetTreeNode node, char initChar, int ways, boolean isLeaf) {
         for (int i = 0; i < ways; i++) {
