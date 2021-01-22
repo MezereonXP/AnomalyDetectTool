@@ -35,10 +35,15 @@ public class IsolationTree {
             node.size = end - start + 1;
             return node;
         }
+
         double min = data[start];
         double max = data[end];
         double divd;
         do {
+            if (min == max) {
+                divd = min;
+                break;
+            }
             divd = min + Math.random() * max;
         } while (divd <= min || divd >= max);
         int i;
