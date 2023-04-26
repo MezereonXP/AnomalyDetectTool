@@ -38,14 +38,8 @@ public class IsolationTree {
 
         double min = data[start];
         double max = data[end];
-        double divd;
-        do {
-            if (min == max) {
-                divd = min;
-                break;
-            }
-            divd = min + Math.random() * max;
-        } while (divd <= min || divd >= max);
+        double divd = min + (max - min) * Math.random();
+
         int i;
         for (i = start; i <= end; i++) {
             if (data[i] >= divd) {
