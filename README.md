@@ -8,7 +8,7 @@ A tool of detecting anomaly points from data
 <dependency>
   <groupId>com.github.mezereonxp</groupId>
   <artifactId>AnomalyDetectTool</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 </dependency>
 ```
 
