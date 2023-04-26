@@ -79,9 +79,8 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>3.5.0</version>
                         <configuration>
-                            <additionalparam>-Xdoclint:none</additionalparam><!-- 添加这个压制JavaDoc检查 -->
+                            <doclint>none</doclint>
                             <encoding>UTF-8</encoding>
-                            <skip>true</skip>
                         </configuration>
                         <executions>
                             <execution>

@@ -1,7 +1,10 @@
-﻿# AnomalyDetectTool
-[![BCH compliance](https://bettercodehub.com/edge/badge/MezereonXP/AnomalyDetectTool?branch=master)](https://bettercodehub.com/)
+﻿<img src="assets/ADT.jpg" style="width:auto;height:200px">
 
-A tool of detecting anomaly points from data
+---
+# AnomalyDetectTool
+
+> A tool of detecting anomaly points from data
+
 
 现在已经传到中央仓库, 可以直接在依赖添加如下代码来使用
 ```xml
