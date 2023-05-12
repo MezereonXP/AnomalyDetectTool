@@ -1,4 +1,4 @@
-﻿<img src="assets/ADT.jpg" style="width:auto;height:200px">
+﻿<img src="assets/ADT.jpg" style="width:100%;height:auto">
 
 ---
 # AnomalyDetectTool
