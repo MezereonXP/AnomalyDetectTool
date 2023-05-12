@@ -11,7 +11,7 @@
 <dependency>
   <groupId>com.github.mezereonxp</groupId>
   <artifactId>AnomalyDetectTool</artifactId>
-  <version>1.1</version>
+  <version>1.1.1</version>
 </dependency>
 ```
 
