@@ -18,5 +18,6 @@ public class DisplayTool {
         for (Result result : detectTool.getResults()) {
             System.out.print(result.getValue() + ", ");
         }
+        System.out.println();
     }
 }

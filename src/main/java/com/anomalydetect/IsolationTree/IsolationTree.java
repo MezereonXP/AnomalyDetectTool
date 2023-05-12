@@ -39,16 +39,18 @@ public class IsolationTree {
         double min = data[start];
         double max = data[end];
         double divd = min + (max - min) * Math.random();
-
-        int i;
-        for (i = start; i <= end; i++) {
-            if (data[i] >= divd) {
+        int divideIndex;
+        for (divideIndex = start; divideIndex <= end; divideIndex++) {
+            if (data[divideIndex] >= divd) {
                 break;
             }
         }
+        if (min == max) {
+            divideIndex = (start + end) / 2;
+        }
         IsolationTreeNode node = new IsolationTreeNode(divd);
-        node.left = createByR(data, currentHeight + 1, maxHeight, start, i - 1);
-        node.right = createByR(data, currentHeight + 1, maxHeight, i, end);
+        node.left = createByR(data, currentHeight + 1, maxHeight, start, divideIndex - 1);
+        node.right = createByR(data, currentHeight + 1, maxHeight, divideIndex, end);
         return node;
     }
 

@@ -26,6 +26,11 @@ public class IsolationTreeTool implements DetectTool {
     @Override
     public void timeSeriesAnalyse(double[] data) {
         this.results = new ArrayList<Result>();
+        if (data.length > maxSampling) {
+            System.out.println("[IsolationTreeTool]: The MaxSampling is less than the data length!");
+            System.out.println("[IsolationTreeTool]: We have changed the MaxSampling to fit the data length!");
+            maxSampling = data.length;
+        }
         IsolationForest tempForest = new IsolationForest(maxTreeNum, maxSampling);
         tempForest.createForest(data.clone());
         this.forest = tempForest;
